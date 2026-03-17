@@ -1301,6 +1301,10 @@ function Player:resetBlock()-- Reset Block's position and execute I*S
     if self.sound and C.id<8 then
         SFX.fplay(spawnSFX_name[C.id],SETTING.sfx_spawn)
     end
+
+    --Touch SFX
+    self:freshBlockGhost()
+    self:checkTouchSound()
 end
 function Player:getSpawnX(cur)
     return floor(6-#cur.bk[1]*.5)
