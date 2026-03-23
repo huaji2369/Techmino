@@ -394,6 +394,9 @@ return {
     ]],
     support="Dukung pencipta",
     WidgetText={
+        game={
+            -- showInvis="Show Invis"
+        },
         main={
             offline="Main Sendiri",
             qplay="Terakhir Dimain: ",

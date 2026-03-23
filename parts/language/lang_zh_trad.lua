@@ -394,6 +394,9 @@ return {
     ]],
     support="支持作者",
     WidgetText={
+        game={
+            showInvis="顯示隱形方塊"
+        },
         main={
             offline="單人遊戲",
             qplay="快速開始: ",

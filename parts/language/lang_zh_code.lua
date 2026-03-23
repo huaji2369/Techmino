@@ -342,6 +342,9 @@ return {
     ]],
     support="支持作者",
     WidgetText={
+        game={
+            showInvis="ShowInvis"
+        },
         main={
             offline="PlaySingle();",
             qplay="QPlay.",

@@ -382,6 +382,9 @@ return {
     ]],
     support="Support author",
     WidgetText={
+        game={        
+            -- showInvis="Show Invis"
+        },
         main={
             offline="Solo",
             -- qplay="Last Play: ",

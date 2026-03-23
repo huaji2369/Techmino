@@ -12,6 +12,7 @@ local touchMoveLastFrame=false
 local trigGameRate,gameRate
 local autoSkip=0
 local modeTextPos,modeTextWidK
+local showInvis=true
 
 local replaying
 local repRateStrings={[0]="pause",[.125]="0.125x",[.5]="0.5x",[1]="1x",[2]="2x",[5]="5x"}
@@ -57,10 +58,11 @@ end
 
 local speedButtons={'rep0','repP8','repP2','rep1','rep2','rep5'}
 local stepButtons={'step','autoSkip'}
-local replayButtons=TABLE.combine(speedButtons,stepButtons)
+local replayWidgets=TABLE.combine(TABLE.combine(speedButtons,stepButtons),{'showInvis'})
 local function _updateRepButtons()
     local L=scene.widgetList
     if replaying or GAME.tasUsed then
+        widgetWithName('showInvis').hide=false
         for i=1,#speedButtons do
             widgetWithName(speedButtons[i]).hide=false
         end
@@ -81,7 +83,7 @@ local function _updateRepButtons()
             widgetWithName('rep5').hide=true
         end
     else
-        for i=1,#replayButtons do widgetWithName(replayButtons[i]).hide=true end
+        for i=1,#replayWidgets do widgetWithName(replayWidgets[i]).hide=true end
     end
 end
 local function _speedUp()
@@ -406,7 +408,7 @@ function scene.draw()
         mDraw(tasText,640,360,nil,5)
     end
 
-    local repMode=GAME.replaying or tas
+    local repMode=(GAME.replaying or tas) and showInvis
 
     -- Players
     for p=1,#PLAYERS do
@@ -474,14 +476,16 @@ function scene.draw()
     drawWarning()
 end
 scene.widgetList={
-    WIDGET.newKey   {name='rep0',    x=40, y=50, w=60, code=_rep0,    font=40,          fText=CHAR.icon.pause},          -- 1
-    WIDGET.newKey   {name='repP8',   x=105,y=50, w=60, code=_repP8,   font=40,          fText=CHAR.icon.speedOneEights}, -- 2
-    WIDGET.newKey   {name='repP2',   x=170,y=50, w=60, code=_repP2,   font=40,          fText=CHAR.icon.speedOneHalf},   -- 3
-    WIDGET.newKey   {name='rep1',    x=235,y=50, w=60, code=_rep1,    font=40,          fText=CHAR.icon.speedOne},       -- 4
-    WIDGET.newKey   {name='rep2',    x=300,y=50, w=60, code=_rep2,    font=40,          fText=CHAR.icon.speedTwo},       -- 5
-    WIDGET.newKey   {name='rep5',    x=365,y=50, w=60, code=_rep5,    font=40,          fText=CHAR.icon.speedFive},      -- 6
-    WIDGET.newKey   {name='step',    x=40, y=50, w=60, code=_step,    font=40,          fText=CHAR.icon.nextFrame},      -- 7
-    WIDGET.newSlider{name='autoSkip',x=40, y=130,w=100,code=_setAS,   axis={0,2,1},     disp=function()return autoSkip end,show=_autoSkipDisp},
+    WIDGET.newKey   {name='rep0',     x=40, y=50, w=60, code=_rep0,    font=40,          fText=CHAR.icon.pause},          -- 1
+    WIDGET.newKey   {name='repP8',    x=105,y=50, w=60, code=_repP8,   font=40,          fText=CHAR.icon.speedOneEights}, -- 2
+    WIDGET.newKey   {name='repP2',    x=170,y=50, w=60, code=_repP2,   font=40,          fText=CHAR.icon.speedOneHalf},   -- 3
+    WIDGET.newKey   {name='rep1',     x=235,y=50, w=60, code=_rep1,    font=40,          fText=CHAR.icon.speedOne},       -- 4
+    WIDGET.newKey   {name='rep2',     x=300,y=50, w=60, code=_rep2,    font=40,          fText=CHAR.icon.speedTwo},       -- 5
+    WIDGET.newKey   {name='rep5',     x=365,y=50, w=60, code=_rep5,    font=40,          fText=CHAR.icon.speedFive},      -- 6
+    WIDGET.newKey   {name='step',     x=40, y=50, w=60, code=_step,    font=40,          fText=CHAR.icon.nextFrame},      -- 7
+    WIDGET.newSlider{name='autoSkip', x=40, y=130,w=100,code=_setAS,   axis={0,2,1},     disp=function()return autoSkip end,show=_autoSkipDisp},
+    WIDGET.newSwitch{name='showInvis',x=280,y=130,      code=function() showInvis=not showInvis end,disp=function() return showInvis end,font=20},
+    
     WIDGET.newKey   {name='restart', x=0,  y=25, w=60, code=_restart, font=40,          fText=CHAR.icon.retry_spin},     -- 10
     WIDGET.newKey   {name='pause',   x=0,  y=25, w=60, code=pauseGame,font=40,          fText=CHAR.icon.pause},          -- 11
 }

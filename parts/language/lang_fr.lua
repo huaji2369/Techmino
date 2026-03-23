@@ -372,6 +372,9 @@ return {
     ]],
     support="Aider le créateur",
     WidgetText={
+        game={
+            -- showInvis="Show Invis"
+        },
         main={
             offline="Solo",
             qplay="Dernier mode: ",

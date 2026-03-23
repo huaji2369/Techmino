@@ -432,6 +432,9 @@ C. Gamepad
         -- 13-16: Help, Copy, Open, MENU
     },
     WidgetText={
+        game={
+            showInvis="Show Invis"
+        },
         main={
             offline="Single Player",
             qplay="Last Played: ",

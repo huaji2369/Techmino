@@ -438,6 +438,9 @@ C. ゲームパッド
         -- 13-16: Help, Copy, Open, MENU
     },
     WidgetText={
+        game={
+            -- showInvis="Show Invis"
+        },
         main={
             offline="ソロプレイ",
             qplay="続きから: ",

@@ -423,6 +423,9 @@ return {
         -- 13-16: Help, Copy, Open, MENU
     },
     WidgetText={
+        game={
+            showInvis="显示隐藏方块"
+        },
         main={
             offline="单机游戏",
             qplay="快速开始: ",

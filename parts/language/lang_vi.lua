@@ -427,6 +427,9 @@ C. Tay cầm chơi game (Gamepad):
         -- 13-16: Help, Copy, Open, MENU
     },
     WidgetText={
+        game={
+            -- showInvis="Show Invis"
+        },
         main={
             offline="Chơi đơn",
             qplay="Chơi nhanh: ",
