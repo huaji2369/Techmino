@@ -513,6 +513,7 @@ return {
             grid="Rede",
             -- lineNum="line No.",
 
+            -- lockFXType="Lock FX Type",
             lockFX="Nível FX Trava",
             dropFX="Nível FX Queda",
             moveFX="Nível FX Mover",

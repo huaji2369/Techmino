@@ -645,6 +645,7 @@ do-- Userdata tables
         splashFX=2,
         shakeFX=2,
         atkFX=2,
+        lockFXType='swipe',
         cleanCanvas=false,
         blockSatur='normal',
         fieldSatur='normal',

@@ -500,6 +500,7 @@ return {
             grid="Grille",
             -- lineNum="line No.",
 
+            -- lockFXType="Lock FX Type",
             lockFX="Effets de verrouillage",
             dropFX="Effets de chute",
             moveFX="Effets de déplacement",

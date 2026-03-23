@@ -563,6 +563,7 @@ C. Gamepad
             grid="Grid",
             lineNum="Line Numbers",
 
+            lockFXType="Lock FX Type",
             lockFX="Lock FX",
             dropFX="Drop FX",
             moveFX="Move FX",

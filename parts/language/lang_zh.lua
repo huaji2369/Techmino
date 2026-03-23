@@ -554,6 +554,7 @@ return {
             grid="网格不透明度:",
             lineNum="行号透明度:",
 
+            lockFXType="锁定特效样式",
             lockFX="锁定特效:",
             dropFX="下落特效:",
             moveFX="移动特效:",

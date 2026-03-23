@@ -68,6 +68,7 @@ scene.widgetList={
     WIDGET.newSlider{name='grid',         x=740,y=360,lim=280,w=350,axis={0,.4},disp=SETval('grid'),     show="percent",code=SETsto('grid')},
     WIDGET.newSlider{name='lineNum',      x=740,y=420,lim=280,w=350,axis={0,1},disp=SETval('lineNum'),   show="percent",code=SETsto('lineNum')},
 
+    WIDGET.newSelector{name='lockFXType', x=960,y=460,        w=150,list={'swipe','flash'},disp=SETval('lockFXType'),code=SETsto('lockFXType')},
     WIDGET.newSlider{name='lockFX',       x=330,y=460,lim=280,w=540,axis={0,5,1},disp=SETval('lockFX'),  code=SETsto('lockFX')},
     WIDGET.newSlider{name='dropFX',       x=330,y=520,lim=280,w=540,axis={0,5,1},disp=SETval('dropFX'),  code=SETsto('dropFX')},
     WIDGET.newSlider{name='moveFX',       x=330,y=580,lim=280,w=540,axis={0,5,1},disp=SETval('moveFX'),  code=SETsto('moveFX')},

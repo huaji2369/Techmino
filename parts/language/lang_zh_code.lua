@@ -473,6 +473,7 @@ return {
             grid="Set.Grid=",
             lineNum="Set.LineNum=",
 
+            lockFXType="Set.LockFXType",
             lockFX="Set.LockFX=",
             dropFX="Set.DropFX=",
             moveFX="Set.MoveFX=",

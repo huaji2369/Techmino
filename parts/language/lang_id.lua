@@ -525,6 +525,7 @@ return {
             grid="Kegelapan Kisi",
             lineNum="Kegelapan Nomor Baris",
 
+            -- lockFXType="Lock FX Type",
             lockFX="Efek Kunci",
             dropFX="Efek Jatuh",
             moveFX="Efek Pindah",

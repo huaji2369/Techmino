@@ -234,12 +234,17 @@ local function _drawFXs(P)
     -- LockFX
     for i=1,#P.lockFX do
         local S=P.lockFX[i]
-        if S[3]<.5 then
-            gc_setColor(1,1,1,2*S[3])
-            gc_rectangle('fill',S[1],S[2],60*S[3],30)
-        else
-            gc_setColor(1,1,1,2-2*S[3])
-            gc_rectangle('fill',S[1]+30,S[2],60*S[3]-60,30)
+        if SETTING.lockFXType=='swipe' then
+            if S[3]<.5 then
+                gc_setColor(1,1,1,2*S[3])
+                gc_rectangle('fill',S[1],S[2],60*S[3],30)
+            else
+                gc_setColor(1,1,1,2-2*S[3])
+                gc_rectangle('fill',S[1]+30,S[2],60*S[3]-60,30)
+            end
+        elseif SETTING.lockFXType=='flash' then 
+            gc_setColor(1,1,1,S[3]<.5 and 1 or 2-2*S[3])
+            gc_rectangle('fill',S[1],S[2],30,30)
         end
     end
 

@@ -569,6 +569,7 @@ C. ゲームパッド
             grid="グリッド",
             lineNum="行番号",
 
+            -- lockFXType="Lock FX Type",
             lockFX="設置演出",
             dropFX="落下演出",
             moveFX="左右移動演出",

@@ -524,6 +524,7 @@ return {
             grid="Grilla",
             lineNum="Línea Nro.",
 
+            -- lockFXType="Lock FX Type",
             lockFX="FX Vis. de Bloqueo",
             dropFX="FX Vis. de Caída",
             moveFX="FX Vis. de Movim.",

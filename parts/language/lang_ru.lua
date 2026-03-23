@@ -563,6 +563,7 @@ C. Геймпад
             grid="Сетка",
             lineNum="Номера линий",
 
+            -- lockFXType="Lock FX Type",
             lockFX="Эффект блокировки",
             dropFX="Эффект падения",
             moveFX="Эффект перемещения",
