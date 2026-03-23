@@ -23,7 +23,7 @@ TIME=love.timer.getTime
 
 -- Global Vars & Settings
 SFXPACKS={'chiptune'}
-VOCPACKS={'miya','mono','xiaoya','flore','neuro','miku','zundamon'}
+VOCPACKS={'miya','miya_old','mono','xiaoya','flore','neuro','miku','zundamon'}
 FIRSTLAUNCH=false
 DAILYLAUNCH=false
 
@@ -269,6 +269,11 @@ IMG.init{
     miyaCH4='media/image/characters/miya4.png',
     miyaHeart='media/image/characters/miya_heart.png',
     miyaGlow='media/image/characters/miya_glow.png',
+    miyaCH_old='media/image/characters/miya_old.png',
+    miyaF1_old='media/image/characters/miya_old_f1.png',
+    miyaF2_old='media/image/characters/miya_old_f2.png',
+    miyaF3_old='media/image/characters/miya_old_f3.png',
+    miyaF4_old='media/image/characters/miya_old_f4.png',
     monoCH='media/image/characters/mono.png',
     xiaoyaCH='media/image/characters/xiaoya.png',
     xiaoyaOmino='media/image/characters/xiaoya_Omino.png',

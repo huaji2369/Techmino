@@ -65,6 +65,15 @@ function scene.draw()
         gc.translate(0,-6*sin(TIME()*.5))
         gc.setColor(1,1,1,1-(clickTime))
         gc.draw(IMG.miyaHeart,162,52,nil,.3)
+    elseif vocPack=="miya_old" then
+        local jump=math.max(10-(clickTime)*60,0)
+        gc.translate(800,340+10*sin(TIME()*.5)+(jump-10)*jump*.3)
+        gc.draw(IMG.miyaCH_old)
+        gc.setColor(1,1,1,.7)
+        gc.draw(IMG.miyaF1_old,4,47+4*sin(TIME()*.9))
+        gc.draw(IMG.miyaF2_old,42,107+5*sin(TIME()))
+        gc.draw(IMG.miyaF3_old,93,126+3*sin(TIME()*.7))
+        gc.draw(IMG.miyaF4_old,129,98+3*sin(TIME()*.5))
     elseif vocPack=="mono" then
         local jump=math.max(30-(clickTime)*60,0)%10
         gc.translate(730,340+6*sin(TIME()*.5)+(jump-10)*jump*.3)
