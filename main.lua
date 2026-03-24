@@ -22,7 +22,7 @@ VERSION=require"version"
 TIME=love.timer.getTime
 
 -- Global Vars & Settings
-SFXPACKS={'chiptune','TGM'}
+SFXPACKS={'chiptune','TGM','nullpomino','nullpomino_guichu','PPT'}
 VOCPACKS={'miya','miya_old','mono','xiaoya','flore','neuro','miku','zundamon'}
 FIRSTLAUNCH=false
 DAILYLAUNCH=false
@@ -281,6 +281,9 @@ IMG.init{
     mikuCH='media/image/characters/miku.png',
     zundamonCH='media/image/characters/zundamon.png',
     neuroCH='media/image/characters/neuro.png',
+    PPT_Witch='media/image/characters/PPT_Witch.png',
+    nana='media/image/characters/nana.png',
+    suisei='media/image/characters/suisei.png',
     z={
         character='media/image/characters/z_character.png',
         screen1='media/image/characters/z_screen1.png',
@@ -337,6 +340,9 @@ SKIN.load{
     {name="Guidetris (xmiao, lusisi)",      path='media/image/skin/guidetris_xmiao_lusisi.png'},
     {name="Textbone (MrZ)",                 path='media/image/skin/mrz/textbone.png'},
     {name="Coloredbone (MrZ)",              path='media/image/skin/mrz/coloredbone.png'},
+    {name="SRS (Arika)",                   path='media/image/skin/arika/SRS.png'},
+    {name="ARS (Arika)",                   path='media/image/skin/arika/ARS.png'},
+    {name="PPT_Classic",path='media/image/skin/PPT_Classic.png'},
     {name="WTF (MrZ)",                      path='media/image/skin/mrz/wtf.png'},
 }
 

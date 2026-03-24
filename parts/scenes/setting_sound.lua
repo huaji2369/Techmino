@@ -94,6 +94,15 @@ function scene.draw()
     elseif vocPack=="zundamon" then
         gc.translate(810,370)
         gc.draw(IMG.zundamonCH,nil,nil,nil,.65)
+    elseif vocPack=="PPT_Witch" then
+        gc.translate(800,340+12*sin(TIME()*.5))
+        gc.draw(IMG.PPT_Witch,-30)
+    elseif vocPack=="nana" then
+        gc.translate(800,340+12*sin(TIME()*.5))
+        gc.draw(IMG.nana,-30)
+    elseif vocPack=="suisei" then
+        gc.translate(800,340+12*sin(TIME()*.5))
+        gc.draw(IMG.suisei,-30)
     end
     gc.pop()
 end

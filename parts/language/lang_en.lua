@@ -923,6 +923,7 @@ C. Gamepad
         ['big_h']=               {"Big",               "HARD",           "Play in a 5×10 field!"},
         ['master_n']=            {"Master",            "NORMAL",         "For 20G beginners"},
         ['master_h']=            {"Master",            "HARD",           "For 20G pros"},
+        ['master_h_plus']=       {"Master",        "HARD+",      "Challenge another limit!"},
         ['master_m']=            {"Master",            "M21",            "For 20G Masters"},
         ['master_final']=        {"Master",            "FINAL",          "20G and beyond"},
         ['master_ph']=           {"Master",            "PHANTASM",       "???"},
