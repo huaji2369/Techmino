@@ -1,7 +1,7 @@
 local death_lock={15,14,13,12,10, 9,9,9,9,8, 7,7,7,7,6}
 local death_wait={12,11,10,8,8, 8,8,7,7,6, 5,5,5,5,4}
 local death_fall={12,11,10,8,7, 8,7,6,7,5, 5,5,4,5,4}
-local death_garbage={9999,9999,9999,22,20 ,18,17,9999,9999,9999, 20,16,12,8,2}
+local death_garbage={9999,9999,9999,22,20 ,15,12,9999,9999,9999, 20,16,12,8,2}
 return {
     drop=0,
     lock=death_lock[1],
@@ -17,6 +17,7 @@ return {
         D.garbageQuota=D.garbageQuota+1
         if D.garbageQuota>=death_garbage[D.target/100] then
         D.garbageQuota=0
+        SFX.play('collect')
 
         local line=0
         for i=1,10 do
@@ -65,9 +66,9 @@ return {
                 BGM.play('secret7th remix')
                 BG.set('lightning')
             elseif s==10 then
-                if P.stat.frame>294*60 then
+                if P.stat.frame>296*60 then
                     D.pt=1000
-                    P:torikanEnd(294)
+                    P:torikanEnd(296)
                     return
                 else
                 BGM.play('rectification')
