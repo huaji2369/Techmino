@@ -23,7 +23,7 @@ TIME=love.timer.getTime
 
 -- Global Vars & Settings
 SFXPACKS={'chiptune','TGM','nullpomino','nullpomino_guichu','PPT'}
-VOCPACKS={'miya','miya_old','mono','xiaoya','flore','neuro','miku','zundamon'}
+VOCPACKS={'miya','miya_old','mono','xiaoya','flore','neuro','miku','zundamon','nana','suisei','PPT_Witch'}
 FIRSTLAUNCH=false
 DAILYLAUNCH=false
 

@@ -1,6 +1,6 @@
-local death_lock={15,14,13,12,10, 9,9,9,9,8, 7,7,7,7,6}
-local death_wait={12,11,10,8,8, 8,8,7,7,6, 5,5,5,5,4}
-local death_fall={12,11,10,8,7, 8,7,6,7,5, 5,5,4,5,4}
+local death_lock={15,14,13,12,10, 9,9,8,8,7, 7,7,7,7,6}
+local death_wait={12,11,10,8,8, 8,8,8,7,6, 5,5,4,4,4}
+local death_fall={12,11,10,8,7, 8,7,7,6,5, 5,5,4,4,4}
 local death_garbage={9999,9999,9999,22,20 ,15,12,9999,9999,9999, 20,16,12,8,2}
 return {
     drop=0,
@@ -14,7 +14,9 @@ return {
     end,
     hook_drop=function(P)
         local D=P.modeData
+        if P.lastPiece.row==0 then
         D.garbageQuota=D.garbageQuota+1
+        end
         if D.garbageQuota>=death_garbage[D.target/100] then
         D.garbageQuota=0
         SFX.play('collect')
@@ -47,6 +49,7 @@ return {
             E.garbage=death_garbage[s]
             if s==3 then
                 E.das=5
+                BGM.play('super7th')
                 BG.set('rainbow')
             elseif s==5 then
                 E.das=4

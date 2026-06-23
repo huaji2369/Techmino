@@ -3,6 +3,7 @@ return {
         freshLimit=15,
         sequence="bagES",
         eventSet='master_h_plus',
+        pushSpeed=1e99,
         bg='bg2',bgm='secret7th',
     },
     slowMark=true,
